@@ -4,7 +4,8 @@
 
 - Önce python dosyasını çalıştır.
 - İndirdiği pandoc'u kur.
-- Ardından Kitap yazmaya başlayabilirsin.
+- Ardından istersen pandoc installer ve python dosyasını silebilirsin.
+- Kitap yazmaya başlayabilirsin.
 
 ## Kitap Yazmaya Başlamak
 
