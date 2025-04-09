@@ -11,4 +11,4 @@
 
 - chapters içine tercihen ch* prefixi ile md dosyaları yazmaya başla.
 - vscode kullanıyorsan ctrl + shift + b ile kitapı derle.
-- kullanmıyorsan scripts klasörü içindeki compile.bat dosyasını çalıştır.
+- kullanmıyorsan klasörde `./scripts/compile.bat` dosyasını çalıştır.
