@@ -13,6 +13,18 @@ def install_pandoc():
         urllib.request.urlretrieve(url, filename)
         subprocess.run(["msiexec", "/i", filename, "/quiet"], check=True)
         print("Pandoc başarıyla kuruldu.")
+    elif system == "linux":
+        print("Linux işletim sistemi tespit edildi, Pandoc kurulumu başlatılıyor...")
+        # Debian/Ubuntu tabanlı sistemler için apt komutu
+        if os.path.exists('/usr/bin/apt'):
+            subprocess.run(["sudo", "apt", "install", "pandoc", "-y"], check=True)
+        # Fedora/RHEL tabanlı sistemler için dnf komutu
+        elif os.path.exists('/usr/bin/dnf'):
+            subprocess.run(["sudo", "dnf", "install", "pandoc", "-y"], check=True)
+        # Arch tabanlı sistemler için pacman komutu
+        elif os.path.exists('/usr/bin/pacman'):
+            subprocess.run(["sudo", "pacman", "-S", "pandoc", "--noconfirm"], check=True)
+        print("Pandoc başarıyla kuruldu.")
 
 
 build_system = [".vscode", "chapters", "images", "out", "scripts",]
